@@ -885,7 +885,8 @@ body {
 
 /* Floating Bottom Navigation (Pill) */
 .bottom-nav {
-  position: absolute;
+  position: fixed;
+  /* Keep it sticky */
   bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);

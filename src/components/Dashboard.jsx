@@ -361,7 +361,7 @@ export default function Dashboard() {
             {/* Navbar Header (UserInfo) */}
             <div className="top-header">
                 <div className="user-profile">
-                    <img src="../src/assets/fox.jpg" alt="User" className="avatar" />
+                    <img src="https://ui-avatars.com/api/?name=User&background=6366f1&color=fff&rounded=true" alt="User" className="avatar" />
                     <div className="user-info">
                         <span className="welcome-text">Welcome</span>
                         <span className="user-name">{currentUser.email.split('@')[0]}</span>
@@ -629,7 +629,9 @@ export default function Dashboard() {
                                             </button>
                                             <div className="todo-content">
                                                 <div className="todo-title">{todo.reason}</div>
-                                                <div className="todo-meta">{todo.date} at {todo.time}</div>
+                                                <div className="todo-meta">
+                                                    {todo.date ? format(parseISO(todo.date), 'dd/MM/yyyy') : ''} at {todo.time}
+                                                </div>
                                             </div>
 
                                             <div className="todo-actions">
