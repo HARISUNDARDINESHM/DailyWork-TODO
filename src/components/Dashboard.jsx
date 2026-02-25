@@ -3,7 +3,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { auth, db } from '../firebase';
 import { signOut } from 'firebase/auth';
 import { collection, addDoc, query, where, onSnapshot, orderBy, updateDoc, doc, deleteDoc } from 'firebase/firestore';
-import { LogOut, Plus, CheckCircle, Circle, Download, Clock, Edit2, Trash2, Calendar as CalendarIcon, Briefcase } from 'lucide-react';
+import { LogOut, Plus, CheckCircle, Circle, Download, Clock, Edit2, Trash2, Calendar as CalendarIcon, Briefcase, User } from 'lucide-react';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import * as XLSX from 'xlsx';
@@ -361,7 +361,9 @@ export default function Dashboard() {
             {/* Navbar Header (UserInfo) */}
             <div className="top-header">
                 <div className="user-profile">
-                    <img src="https://ui-avatars.com/api/?name=User&background=6366f1&color=fff&rounded=true" alt="User" className="avatar" />
+                    <div className="avatar-icon">
+                        <User size={24} />
+                    </div>
                     <div className="user-info">
                         <span className="welcome-text">Welcome</span>
                         <span className="user-name">{currentUser.email.split('@')[0]}</span>

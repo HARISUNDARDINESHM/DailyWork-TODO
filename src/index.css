@@ -296,11 +296,15 @@ body {
   gap: 12px;
 }
 
-.avatar {
+.avatar-icon {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  object-fit: cover;
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 2px solid white;
 }
 
@@ -507,7 +511,15 @@ body {
 
 .shrink-input {
   flex: 1;
-  min-width: 120px;
+  min-width: 140px;
+  /* Increased to allow full date to render */
+}
+
+/* Fix mobile clipping where the native calendar icon goes over the text */
+input[type="date"].input-field,
+input[type="time"].input-field {
+  padding-right: 2.5rem;
+  /* Ensure space for the native calendar icon */
 }
 
 .expand-input {
