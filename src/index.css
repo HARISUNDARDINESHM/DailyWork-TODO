@@ -558,8 +558,8 @@ input[type="time"].input-field {
 .small-input {
   padding: 0.5rem;
   font-size: 0.9rem;
-  min-width: 150px;
-  /* Ensure enough space for date and calendar icon */
+  min-width: 170px;
+  /* Expand enough to fit MM/DD/YYYY with native icon */
 }
 
 .btn-sm {
